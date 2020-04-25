@@ -3,11 +3,11 @@
 $server_key = "SB-Mid-server-CqoECa1sGqzPHF74AzZ8srx_";
 
 $is_production = false;
-$api_url = $is_production ? 'https://api.midtrans.com/': 'https://api.sandbox.midtrans.com/';
+$api_url = $is_production ? 'https://api.midtrans.com': 'https://api.sandbox.midtrans.com';
 
 if(!strpos($_SERVER['REQUEST_URI'], '/charge')){
 	http_response_code(404);
-	echo "wrong path gan"; exit();
+	echo "wrong path"; exit();
 }
 
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){
