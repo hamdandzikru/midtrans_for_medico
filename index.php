@@ -5,7 +5,7 @@ $server_key = "SB-Mid-server-CqoECa1sGqzPHF74AzZ8srx_";
 $is_production = false;
 $api_url = $is_production ? 'https://app.midtrans.com/snap/v1/transactions': 'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
-if(!strpos($_SERVER['REQUEST_URI'], '/charge')){
+if(!strpos($_SERVER['REQUEST_URI'], `/charge`)){
 	http_response_code(404);
 	echo "wrong path"; exit();
 }
